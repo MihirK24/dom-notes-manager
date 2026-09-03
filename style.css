@@ -1,0 +1,172 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f6f8;
+    color: #222;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 50px auto;
+}
+
+/* Header */
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 8px;
+}
+
+header p {
+    color: #666;
+    font-size: 16px;
+}
+
+/* Input Section */
+
+.note-input {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.note-input input {
+    flex: 1;
+    padding: 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+}
+
+.note-input input:focus {
+    border-color: #555;
+}
+
+.note-input button {
+    padding: 14px 20px;
+    background: #222;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.note-input button:hover {
+    background: #444;
+}
+
+/* Notes Header */
+
+.notes-header {
+    margin-bottom: 15px;
+}
+
+.notes-header h2 {
+    font-size: 20px;
+}
+
+/* Notes */
+
+.notes-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.note-card {
+    background: white;
+    padding: 18px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+}
+
+.note-text {
+    font-size: 17px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    word-wrap: break-word;
+}
+
+.note-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.note-buttons button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.important-btn {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.edit-btn {
+    background: #e2e3e5;
+    color: #333;
+}
+
+.delete-btn {
+    background: #f8d7da;
+    color: #842029;
+}
+
+/* Important Note */
+
+.note-card.important {
+    border-left: 5px solid #f0ad00;
+    background: #fffaf0;
+}
+
+/* Empty Message */
+
+.empty-message {
+    text-align: center;
+    color: #777;
+    margin-top: 25px;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .container {
+        width: 94%;
+        margin: 30px auto;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    .note-input {
+        flex-direction: column;
+    }
+
+    .note-input button {
+        width: 100%;
+    }
+
+    .note-buttons {
+        flex-wrap: wrap;
+    }
+}
