@@ -1,13 +1,52 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>dom-notes-manager</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DOM Notes Manager</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>📝 Notes Manager</h1>
+            <p>DOM-Based Notes Manager</p>
+        </header>
+
+        <section class="note-input">
+
+            <input
+                type="text"
+                id="noteInput"
+                placeholder="Enter your note here..."
+            >
+
+            <button id="addNoteBtn">
+                Add Note
+            </button>
+
+        </section>
+
+        <div class="notes-header">
+            <h2 id="noteCount">Total Notes: 0</h2>
+        </div>
+
+        <section id="notesContainer" class="notes-container">
+            <!-- Notes will be added dynamically using JavaScript -->
+        </section>
+
+        <p id="emptyMessage" class="empty-message">
+            No notes yet. Add your first note!
+        </p>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
 </html>
